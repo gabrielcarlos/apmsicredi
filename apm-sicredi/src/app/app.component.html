@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<br />
+
+<input type="text" [(ngModel)]="txtTarefa"/> 
+<button type="button" (click)="adicionarTarefa()">Adicionar na lista</button>
+
+<ul>
+  <li *ngFor="let tarefa of listaDeTarefas">{{tarefa}}</li>
+</ul>
