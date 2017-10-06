@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Task } from '../task';
 
 @Component({
   selector: 'app-lista-tarefas',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaTarefasComponent {
 
-  title = 'Tarefas';
   listaDeTarefas = [];
-  txtTarefa = "";
+  tarefa = { nome: '', valor : 0};
 
   adicionarTarefa() {
-   this.listaDeTarefas.push(this.txtTarefa);
+   let tarefa = Object.assign({}, this.tarefa);
+   this.listaDeTarefas.push(tarefa);
   }
 
 }
