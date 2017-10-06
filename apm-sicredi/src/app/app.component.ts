@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tarefas';
-  listaDeTarefas = [];
-  txtTarefa = "";
-
-  adicionarTarefa() {
-   this.listaDeTarefas.push(this.txtTarefa);
-  }
+  
 }
