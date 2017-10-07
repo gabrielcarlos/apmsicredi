@@ -1,9 +1,11 @@
 <input type="text" [(ngModel)]="tarefa.nome"/>
 <br />
-<input type="number" [(ngModel)]="tarefa.valor"/> 
+<input type="text" [(ngModel)]="tarefa.valor"/> 
 <br />
 <button type="button" (click)="adicionarTarefa()">Adicionar na lista</button>
 
 <ul>
-  <li *ngFor="let tarefa of listaDeTarefas" [innerHtml]="tarefa.nome + ' - ' + tarefa.valor"></li>
+  <li *ngFor="let tarefa of listaDeTarefas" [myTask]="tarefa">{{tarefa.nome  + ' - ' + (tarefa.valor | formatCurrency)}}</li>
 </ul>
+
+<p myTask></p>
