@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Task } from '../task';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-lista-tarefas',
@@ -8,12 +9,10 @@ import { Task } from '../task';
 })
 export class ListaTarefasComponent {
 
-  listaDeTarefas = [];
-  tarefa = { nome: '', valor : 0};
+  listaDeTarefas;
 
-  adicionarTarefa() {
-   let tarefa = Object.assign({}, this.tarefa);
-   this.listaDeTarefas.push(tarefa);
+  constructor(private taskService:TaskService){
+    this.listaDeTarefas = taskService.listaDeTarefas;
   }
 
 }
