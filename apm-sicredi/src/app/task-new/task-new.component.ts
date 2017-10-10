@@ -12,6 +12,7 @@ export class TaskNewComponent  {
   listaDeTarefas:Array<Task>;
 
   tarefa:Task = { nome: '', valor : 0};
+  
   constructor(private taskService:TaskService){
     this.listaDeTarefas = taskService.listaDeTarefas;
   }
