@@ -24,8 +24,8 @@ export class CepService {
      cep.logradouro = cepNaResposta.logradouro;
      cep.complemento = cepNaResposta.complemento;
      cep.bairro = cepNaResposta.bairro;
-     cep.cidade = cepNaResposta.cidade;
-     cep.estado = cepNaResposta.estado;
+     cep.estado = cepNaResposta.uf;
+     cep.cidade = cepNaResposta.localidade;
      return cep;
    }
 

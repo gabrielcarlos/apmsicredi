@@ -4,22 +4,21 @@ import { HttpModule} from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-import { CepService } from './cep.service';
-import { CepComponent } from './cep/cep.component';
 import { TarefasModule } from './tarefas/tarefas.module';
+import { CepModule } from './cep/cep.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CepComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    TarefasModule
+    TarefasModule,
+    CepModule
   ],
-  providers: [CepService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
